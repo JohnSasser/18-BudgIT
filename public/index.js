@@ -1,6 +1,13 @@
 let transactions = [];
 let myChart;
 
+// register Service Worker in .js front end code
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('/service-worker.js').catch((err) => {
+		if (err) console.log(err);
+	});
+}
+
 // install and use a service worker to go between the api call and res to catch data and store it in a "service worker";
 fetch('/api/transaction')
 	.then((response) => {
@@ -119,8 +126,8 @@ function sendTransaction(isAdding) {
 		method: 'POST',
 		body: JSON.stringify(transaction),
 		headers: {
-			Accept: 'application/json, text/plain, */*',
-			'Content-Type': 'application/json',
+			// Accept: 'application/json, text/plain, */*',
+			// 'Content-Type': 'application/json',
 		},
 	})
 		.then((response) => {
@@ -138,6 +145,7 @@ function sendTransaction(isAdding) {
 		.catch((err) => {
 			// fetch failed, so save in indexed db
 			saveRecord(transaction);
+			console.log(err);
 
 			// clear form
 			nameEl.value = '';

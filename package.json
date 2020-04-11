@@ -5,9 +5,6 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "webpack": "webpack --watch",
-    "build": "npm run webpack",
-    "prestart": "npm run webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite-server": "lite-server"
   },
@@ -30,10 +27,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "babel-loader": "^8.1.0",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-pwa-manifest": "^4.2.0"
+    "@babel/preset-env": "^7.9.5"
   }
 }

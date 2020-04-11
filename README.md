@@ -8,9 +8,18 @@ The user will be able to add expenses and deposits to their budget with or witho
 
 Offline Functionality:
 
+<!-- NEED:
+service worker
+save to service worker cached
+go over and push the cached data to the DB when back online.
+ -->
+
 - Enter deposits offline
 <!--
+build a service worker;
+
  -->
+
 - Enter expenses offline
   <!--
    -->
@@ -66,3 +75,5 @@ THEN that will be shown on the page, and added to their transaction history when
   - the URL to the deployed application
 
   - the URL to the Github repository
+
+<!--  -->
