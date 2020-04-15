@@ -47,11 +47,6 @@ self.addEventListener('activate', function (evt) {
 self.addEventListener('fetch', function (evt) {
 	// return the api
 	if (evt.request.url.includes('/api/')) {
-		// if network is available
-		// pull data from server
-		// if offline
-		// pull data from IndexedDB
-
 		evt.respondWith(
 			caches
 				.open(DATA_CACHE_NAME)
